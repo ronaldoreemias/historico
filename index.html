@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header style="background-color: #2c3e50;">
+        <H1 style="color: aliceblue; text-align: center;">SISTEMA DE HISTÓRICO DE SERVIÇOS</H1>
+    </header>
+    <main>
+        <div class="container mt-4" style="width: 70%; background-color: rgba(255, 255, 255, 0);">
+            <div class="cadastro_produto mb-4 p-3 bg-white rounded shadow-sm">
+                <div class="form-row" style="width: 100%;">
+                    <div class="col">
+                        <input style="width: 100%; height: 40px; border-radius: 8px; margin: 5px;" type="text" id="nome_produto" class="form-control mb-2" placeholder="Nome do Produto/serviço">
+                    </div>
+                </div>
+            </div>
+            <div class="box_produto mb-4 p-3 bg-white rounded shadow-sm">
+                <div class="form-row" style="width: 100%;">
+                    <div class="col">
+                        <input style="width: 100%; height: 40px; border-radius: 8px; margin: 5px;" type="number" id="preco" class="form-control mb-2" placeholder="Preço">
+                    </div>
+                </div>
+                <div class="form-row" style="width: 100%;">
+                    <div class="col">
+                        <input style="width: 100%; height: 40px; border-radius: 8px; margin: 5px;" type="number" id="quantidade" class="form-control mb-2" placeholder="Quantidade">
+                    </div>
+                    <div class="col">
+                        <input style="width: 100%; height: 40px; border-radius: 8px; margin: 5px;" type="text" id="fornecedor" class="form-control mb-2" placeholder="cliente">
+                    </div>
+                </div>
+                <div class="form-row" style="width: 100%;">
+                    <div class="col" style="display: flex;">
+                        <h2 >Data do serviço : </h2>
+                        <input  type="date" id="data_cadastro" class="form-control mb-2" style="height: 50px; margin: 10px; border-radius: 10px;" >
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mb-4">
+                <button id="enviar" class="btn btn-primary mr-2" style="background-color: green;">Enviar</button>
+                <button id="imprimir" style="background-color: blue;" class="btn btn-secondary">Imprimir</button>
+            </div>
+            <div class="box_historico_dados">
+                <div class="historico">
+                    <table class="table-striped">
+                        <thead>
+                            <tr>
+                                <th>NOME DO PRODUTO/SERVIÇO</th>
+                                <th>PREÇO</th>
+                                <th>QUANTIDADE</th>
+                                <th>CLIENTE</th>
+                                <th>DATA DO SERVIÇO</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historico_corpo" class="historico_corpo">
+                            <!-- Dados do histórico serão inseridos aqui -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="text-center mb-4">
+                <input style="width: 100%; height: 40px;" type="date" id="data_filtro" class="form-control mb-2" placeholder="Filtrar por data">
+                <button id="pesquisar" class="btn btn-info" style="background-color: blue; color: aliceblue; margin-top: 8px;">Pesquisar</button>
+            </div>
+        </div>
+        <div class="tabela_de_resultados" >
+            <div id="total_valor"></div>
+            <div id="diferenca_valor"></div>
+        </div>
+    </main>
+    <script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+/* Estilo geral */
+body, html {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.form-row, col {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* Main e seus componentes */
+main {
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cadastro_produto,
+.box_produto,
+.box_historico_dados,
+.text-center,
+.tabela_de_resultados {
+    background-color: #444;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    background-color: #555;
+    border: 1px solid #666;
+    color: #fff;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+.btn-primary, .btn-secondary, .btn-info {
+    background-color: #ff4757;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover, .btn-secondary:hover, .btn-info:hover {
+    background-color: #ff6b81;
+    transform: scale(1.05);
+}
+
+.btn-primary:active, .btn-secondary:active, .btn-info:active {
+    background-color: #ff4757;
+}
+
+.table-striped {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-striped th, .table-striped td {
+    padding: 10px;
+    border: 1px solid #666;
+    text-align: center;
+    color: #fff;
+}
+
+.table-striped th {
+    background-color: #555;
+}
+
+.table-striped tr:nth-child(even) {
+    background-color: #444;
+}
+
+.table-striped tr:nth-child(odd) {
+    background-color: #333;
+}
+
+/* Estilo adicional */
+.tabela_de_resultados .text-white {
+    color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-center button {
+    margin: 0 10px;
+}
+
+.historico {
+    max-height: 300px; /* Ajuste a altura máxima conforme necessário */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical se o conteúdo exceder a altura */
+}
+
+.historico table {
+    width: 100%;
+}
+
+.historico th, .historico td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.historico th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.historico td {
+    background-color: #fff;
+    color: #333;
+}
+
+
+header {
+    background-color: #000000;
+    height: 20%;
+    width: 100%;
+}
+
+
+
+button {
+    padding: 10px 20px;
+    background-color: #c70000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1976d2;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background-color: #070707;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    position: relative;
+}
+
+/* Botão de fechar modal */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: #f44336;
+}
+
+/* Estilo tela de caixa */
+.tela_caixa {
+    width: 50%;
+    height: 70%;
+    margin-right: 5%;
+    float: left;
+    background-color: #472323;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilo barra e barra-content */
+.barra-1 {
+    width: 100%;
+    height: 90%;
+    background-color: #00000000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    text-align: center
+}
+
+.barra {
+    background-color: #ffffff;
+    height: 90%;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.barra-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barra-content input, .barra-content button, .barra-content select {
+    width: 100%;
+    padding: 15px;
+    margin: 2px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 14px;
+}
+
+.barra-content input {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.barra-content input::placeholder {
+    color: #aaa;
+}
+
+.barra-content input:focus {
+    background-color: #e0e0e0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.barra-content button {
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.barra-content button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.barra-content button:active {
+    background-color: #388e3c;
+}
+
+/* Estilo resultado pesquisa */
+.resultado_pesquisa {
+    width: 30%;
+    height: 50%;
+    float: left;
+    background-color: #ff0303;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.produto_procuado {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.valor_total{
+    margin-top: 5px;
+    width: 30%;
+    height: 10%;
+    float: left;
+    background-color: #ff0303;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
